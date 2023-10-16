@@ -1,0 +1,14 @@
+ERROR - 2023-10-16 04:11:38 --> mysqli_sql_exception: Column 'categoria' cannot be NOT NULL: needed in a foreign key constraint 'noticias2_categoria_foreign' SET NULL in C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `n...', 0)
+#1 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `n...')
+#2 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `n...')
+#3 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `n...')
+#4 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\app\Database\Migrations\2023-10-16-034843_CreaTablaNoticias.php(53): CodeIgniter\Database\Forge->createTable('noticias2')
+#5 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\MigrationRunner.php(877): App\Database\Migrations\CreaTablaNoticias->up()
+#6 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\hp\Desktop\PROYECTOS PHP\api-noticias\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
